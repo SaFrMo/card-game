@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "./built/",
+        "sourceMap": false,
+        "strictNullChecks": true,
+        "module": "es6",
+        "jsx": "react",
+        "target": "es6",
+        "allowJs": true
+    },
+    "include": ["./lib/"]
+}
