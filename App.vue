@@ -1,13 +1,27 @@
 <template>
-    <main class="app">Test!!</main>
+    <main class="app">
+        <ul>
+            <li v-for="(card, i) in deck" :key="i">{{ card }}</li>
+        </ul>
+    </main>
 </template>
 
 <script>
-import Card from './built/Card'
+import Cards from './built/CardDefaults'
+const { BASIC_ATTACK, BASIC_MOVE, BASIC_DEFEND } = Cards
 
 export default {
-    mounted() {
-        console.log(new Card())
+    data() {
+        return {
+            deck: [
+                BASIC_ATTACK,
+                BASIC_ATTACK,
+                BASIC_ATTACK,
+                BASIC_ATTACK,
+                BASIC_DEFEND,
+                BASIC_DEFEND
+            ]
+        }
     }
 }
 </script>
