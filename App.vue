@@ -7,8 +7,9 @@
 </template>
 
 <script>
-import Cards from './built/CardDefaults'
-const { BASIC_ATTACK, BASIC_MOVE, BASIC_DEFEND } = Cards
+import Card from './built/Card'
+import CardDefaults from './built/CardDefaults'
+const { BASIC_ATTACK, BASIC_MOVE, BASIC_DEFEND } = CardDefaults
 
 export default {
     data() {
