@@ -3,8 +3,13 @@
         <h3 class="name">{{ card.name }}</h3>
         <span class="cost">{{ card.cost }}</span>
         <img class="image" src="//placehold.it/300x180" />
-        <div class="text">
-            {{ card.text }}
+        <div class="text-wrap">
+            <div class="main-text">
+                {{ card.text.replace('%n', card.effect.amount) }}
+            </div>
+            <div class="flavor-text">
+                {{ card.flavorText }}
+            </div>
         </div>
     </div>
 </template>
@@ -44,11 +49,17 @@ export default {
         grid-column: span 2;
         width: 100%;
     }
-    .text {
+    .text-wrap {
+        display: grid;
+        grid-template-rows: 1fr auto;
         border: 1px solid black;
         padding: 8px 5px;
         background: var(--text-background);
         grid-column: span 2;
+    }
+    .flavor-text {
+        font-size: 12px;
+        font-style: italic;
     }
 }
 </style>
