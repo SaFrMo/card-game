@@ -4,9 +4,10 @@
         <span class="cost">{{ card.cost }}</span>
         <img class="image" src="//placehold.it/300x180" />
         <div class="text-wrap">
-            <div class="main-text">
-                {{ card.text.replace('%n', card.effect.amount) }}
-            </div>
+            <div
+                class="main-text"
+                v-html="card.text.replace('%n', card.effect.amount)"
+            />
             <div class="flavor-text">
                 {{ card.flavorText }}
             </div>
